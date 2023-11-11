@@ -1,9 +1,10 @@
 @import './base.css';
 
 main {
-  width: 100vw;
+  width: 99vw;
 }
 #app {
+  width: 100vw;
   max-width: 1280px;
   font-weight: normal;
 }

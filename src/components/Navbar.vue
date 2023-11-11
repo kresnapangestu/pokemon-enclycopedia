@@ -3,7 +3,7 @@
   <div class="nav-bar" :class="{ sticky: isSticky }">
     <div class="logo-container">
       <img alt="Pokemon logo" class="logo" src="@/assets/Frame 9.png" width="40" height="40" />
-      <span>Pokemon Encyclopedia</span>
+      <span>&nbsp; Pokemon Encyclopedia</span>
     </div>
     <SearchBar @search="handleSearch" />
   </div>
@@ -30,7 +30,6 @@ onUnmounted(() => {
 })
 
 const handleSearch = (searchTerm) => {
-  console.log('Search term:', searchTerm)
   emit('search-pokemon', searchTerm)
 }
 </script>
@@ -58,6 +57,8 @@ h3 {
   color: white;
 }
 .logo-container {
+  display: flex;
+  align-items: center;
   padding: 0 1%;
 }
 
@@ -65,8 +66,8 @@ h3 {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: white; /* Change the background color as needed */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   color: black;
 }
 
